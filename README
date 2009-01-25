@@ -1,0 +1,6 @@
+Installed modules:
+
+ * pymacs
+ * rope
+ * ropemacs
+ * pylint and dependencies; copy files from ./pylint to /bin
