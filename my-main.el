@@ -5,6 +5,8 @@
 (menu-bar-mode -1)
 (set-default 'fill-column 80)
 (setq visible-bell t)
+(setq x-select-enable-primary nil)
+(setq x-select-enable-clipboard t)
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -44,7 +46,12 @@
     lambda () (local-set-key "\r" 'newline-and-indent)))
 
 ;; pymacs & ropemacs
-(require 'pymacs)
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+
 (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport 't)
 
@@ -66,11 +73,27 @@
 
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
-(add-hook 'python-mode-hook 'flymake-mode)
+;(add-hook 'python-mode-hook 'flymake-mode)
 
 ;; csharp-mode
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
 (setq auto-mode-alist
   (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
 
+;; haskell-mode
+(setq auto-mode-alist
+      (append auto-mode-alist
+              '(("\\.[hg]s$"  . haskell-mode)
+                ("\\.hi$"     . haskell-mode)
+                ("\\.l[hg]s$" . literate-haskell-mode))))
+
+(autoload 'haskell-mode "haskell-mode"
+   "Major mode for editing Haskell scripts." t)
+(autoload 'literate-haskell-mode "haskell-mode"
+   "Major mode for editing literate Haskell scripts." t)
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
