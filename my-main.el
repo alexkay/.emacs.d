@@ -1,5 +1,3 @@
-(server-start)
-
 ;; UI
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -35,7 +33,17 @@
 ;; colours
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-deep-blue)
+(defun apply-color-theme (frame)
+	(select-frame frame)
+	(if (window-system frame)
+		(color-theme-deep-blue)
+		(color-theme-arjen)))
+(setq color-theme-is-cumulative nil)
+(setq color-theme-is-global nil)
+(add-hook 'after-make-frame-functions 'apply-color-theme)
+
+;; font
+(set-default-font "DejaVu Sans Mono=13:style=Book")
 
 ;; ido
 (require 'ido)
@@ -94,6 +102,5 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
-
