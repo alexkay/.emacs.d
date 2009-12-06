@@ -7,6 +7,8 @@
 (setq x-select-enable-clipboard t)
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
+(line-number-mode 1)
+(column-number-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq inhibit-startup-echo-area-message t)
 (setq inhibit-startup-message t)
@@ -89,18 +91,8 @@
   (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
 
 ;; haskell-mode
-(setq auto-mode-alist
-      (append auto-mode-alist
-              '(("\\.[hg]s$"  . haskell-mode)
-                ("\\.hi$"     . haskell-mode)
-                ("\\.l[hg]s$" . literate-haskell-mode))))
-
-(autoload 'haskell-mode "haskell-mode"
-   "Major mode for editing Haskell scripts." t)
-(autoload 'literate-haskell-mode "haskell-mode"
-   "Major mode for editing literate Haskell scripts." t)
-
+(load "haskell-mode/haskell-site-file")
+(setq haskell-font-lock-symbols 'unicode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
