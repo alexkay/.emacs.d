@@ -15,6 +15,7 @@
 (global-auto-revert-mode 1)
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 (setq make-backup-files nil)
+(set-scroll-bar-mode 'right)
 (global-set-key "\M-n" (lambda () (interactive) (scroll-up 1)))
 (global-set-key "\M-p" (lambda () (interactive) (scroll-down 1)))
 (add-hook 'isearch-mode-end-hook 'custom-goto-match-beginning)
@@ -44,12 +45,31 @@
 (setq color-theme-is-global nil)
 (add-hook 'after-make-frame-functions 'apply-color-theme)
 
-;; font
-(set-default-font "DejaVu Sans Mono=13:style=Book")
-
 ;; ido
 (require 'ido)
 (ido-mode t)
+
+;; C
+(require 'cc-mode)
+(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+(add-hook 'c-mode-common-hook (
+    lambda ()
+        (c-set-style "linux")
+        (setq c-basic-offset 4
+			  tab-width 4
+			  indent-tabs-mode t)))
+
+;; Vala
+(require 'vala-mode)
+(autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
+(add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
+(add-to-list 'auto-mode-alist '("\\.vapi$" . vala-mode))
+(add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
+(add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
+
+;; Perl hook.
+(add-hook 'perl-mode-hook (
+    lambda () (local-set-key "\r" 'newline-and-indent)))
 
 ;; Python hook.
 (add-hook 'python-mode-hook (
