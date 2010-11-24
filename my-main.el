@@ -96,3 +96,13 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+
+;; Perl
+(defalias 'perl-mode 'cperl-mode)
+(add-hook 'cperl-mode-hook (
+    lambda () (local-set-key "\r" 'newline-and-indent)))
+(setq cperl-indent-level 4
+      cperl-close-paren-offset -4
+      cperl-continued-statement-offset 0
+      cperl-indent-parens-as-block t
+      cperl-tab-always-indent t)
