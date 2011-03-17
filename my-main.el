@@ -67,23 +67,19 @@
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
-;; Perl hook.
-(add-hook 'perl-mode-hook (
-    lambda () (local-set-key "\r" 'newline-and-indent)))
-
 ;; Python hook.
 (add-hook 'python-mode-hook (
     lambda () (local-set-key "\r" 'newline-and-indent)))
 
 ;; pymacs & ropemacs
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
+;(autoload 'pymacs-apply "pymacs")
+;(autoload 'pymacs-call "pymacs")
+;(autoload 'pymacs-eval "pymacs" nil t)
+;(autoload 'pymacs-exec "pymacs" nil t)
+;(autoload 'pymacs-load "pymacs" nil t)
 
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport 't)
+;(pymacs-load "ropemacs" "rope-")
+;(setq ropemacs-enable-autoimport 't)
 
 ;; Django templates.
 (require 'django-html-mode)
