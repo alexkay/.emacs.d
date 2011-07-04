@@ -69,6 +69,9 @@
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 (add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
+;; Statistics
+(require 'ess-site)
+
 ;; Python hook.
 (add-hook 'python-mode-hook (
     lambda () (local-set-key "\r" 'newline-and-indent)))
