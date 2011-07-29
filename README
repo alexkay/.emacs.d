@@ -1,6 +1,6 @@
-Installed modules:
+Dependencies:
 
- * pymacs
- * rope
- * ropemacs
- * pylint and dependencies; copy files from ./pylint to /bin
+* misc/color-theme.el
+* math/ess
+* lang/haskell-mode.el
+* lang/erlang - `ln -s` the installed emacs mode to /usr/local/share/emacs/site-lisp
