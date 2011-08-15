@@ -1,0 +1,12 @@
+(require 'color-theme)
+(color-theme-initialize)
+(defun apply-color-theme (frame)
+	(select-frame frame)
+	(if (window-system frame)
+		(color-theme-deep-blue)
+		(color-theme-arjen)))
+(setq color-theme-is-cumulative nil)
+(setq color-theme-is-global nil)
+(add-hook 'after-make-frame-functions 'apply-color-theme)
+
+(provide 'init-theme)
