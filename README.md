@@ -1,4 +1,4 @@
-`ln -s` or clone the repo to `$HOME` and install these dependencies:
+`ln -s` or clone the repo to `$HOME/.emacs.d` and install these dependencies:
 
 * misc/color-theme.el
 * math/ess
