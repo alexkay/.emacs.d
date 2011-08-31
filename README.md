@@ -5,4 +5,5 @@
 * lang/csharp-mode.el
 * lang/haskell-mode.el
 * lang/erlang: `ln -s` the installed emacs mode to /usr/local/share/emacs/site-lisp
+* textproc/markdown-mode.el
 * devel/psvn

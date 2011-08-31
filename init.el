@@ -9,8 +9,9 @@
 (require 'init-python)
 (require 'init-csharp)
 (require 'init-haskell)
+(require 'init-markdown)
 (require 'init-perl)
-(require 'init-erlang)
+;(require 'init-erlang)
 
-(require 'ess-site)
+;(require 'ess-site)
 (require 'psvn)
