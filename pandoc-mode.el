@@ -35,12 +35,12 @@
 
 (defgroup pandoc nil "Minor mode for interacting with pandoc." :group 'Wp)
 
-(defcustom pandoc-binary "/usr/bin/pandoc"
+(defcustom pandoc-binary "/usr/local/bin/pandoc"
   "*The full path of the pandoc binary."
   :group 'pandoc
   :type 'file)
 
-(defcustom pandoc-markdown2pdf-script "/usr/bin/markdown2pdf"
+(defcustom pandoc-markdown2pdf-script "/usr/local/bin/markdown2pdf"
   "*The full path of the markdown2pdf script."
   :group 'pandoc
   :type 'file)
