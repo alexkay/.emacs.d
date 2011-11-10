@@ -1,9 +1,7 @@
 `ln -s` or clone the repo to `$HOME/.emacs.d` and install these dependencies:
 
-* misc/color-theme.el
-* math/ess
 * lang/csharp-mode.el
 * lang/haskell-mode.el
-* lang/erlang: `ln -s` the installed emacs mode to /usr/local/share/emacs/site-lisp
+* lang/tuareg-mode.el
+* misc/color-theme.el
 * textproc/markdown-mode.el
-* devel/psvn

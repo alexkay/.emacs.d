@@ -5,13 +5,10 @@
 (require 'init-theme)
 
 (require 'init-c)
-(require 'init-vala)
-(require 'init-python)
 (require 'init-csharp)
 (require 'init-haskell)
 (require 'init-markdown)
+(require 'init-ocaml)
 (require 'init-perl)
-;(require 'init-erlang)
-
-;(require 'ess-site)
-(require 'psvn)
+(require 'init-python)
+(require 'init-vala)
