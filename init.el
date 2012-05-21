@@ -9,6 +9,7 @@
 (require 'init-haskell)
 (require 'init-markdown)
 (require 'init-ocaml)
+(require 'init-php)
 (require 'init-perl)
 (require 'init-python)
 (require 'init-vala)
