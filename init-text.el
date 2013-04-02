@@ -6,6 +6,9 @@
 (add-hook 'python-mode-hook 'flyspell-prog-mode 1)
 (set-face-attribute 'default nil :height  110)
 
+(require 'paren)
+(setq show-paren-style 'parenthesis)
+(show-paren-mode +1)
 (electric-indent-mode +1)
 (electric-pair-mode +1)
 
