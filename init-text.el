@@ -7,5 +7,6 @@
 (set-face-attribute 'default nil :height  110)
 
 (electric-indent-mode +1)
+(electric-pair-mode +1)
 
 (provide 'init-text)
