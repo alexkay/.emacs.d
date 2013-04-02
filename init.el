@@ -2,7 +2,6 @@
 
 (require 'init-ui)
 (require 'init-text)
-(require 'init-theme)
 
 (require 'init-c)
 (require 'init-csharp)
