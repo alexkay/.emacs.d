@@ -6,4 +6,6 @@
 (add-hook 'python-mode-hook 'flyspell-prog-mode 1)
 (set-face-attribute 'default nil :height  110)
 
+(electric-indent-mode +1)
+
 (provide 'init-text)

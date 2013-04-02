@@ -1,7 +1,3 @@
-;; Python hook.
-(add-hook 'python-mode-hook (
-    lambda () (local-set-key "\r" 'newline-and-indent)))
-
 ;; pymacs & ropemacs
 ;(autoload 'pymacs-apply "pymacs")
 ;(autoload 'pymacs-call "pymacs")
