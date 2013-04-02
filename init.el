@@ -12,4 +12,3 @@
 (require 'init-php)
 (require 'init-perl)
 (require 'init-python)
-(require 'init-vala)
