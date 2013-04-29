@@ -5,6 +5,7 @@
 (add-hook 'text-mode-hook 'flyspell-mode 1)
 (add-hook 'python-mode-hook 'flyspell-prog-mode 1)
 (set-face-attribute 'default nil :height  110)
+(setq-default show-trailing-whitespace t)
 
 (require 'paren)
 (setq show-paren-style 'parenthesis)
