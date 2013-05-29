@@ -1,8 +1,3 @@
-(add-hook 'python-mode-hook
-          '(lambda ()
-             (setq electric-indent-mode nil)
-             (local-set-key "\r" 'newline-and-indent)))
-
 ;; pymacs & ropemacs
 ;(autoload 'pymacs-apply "pymacs")
 ;(autoload 'pymacs-call "pymacs")

@@ -11,8 +11,8 @@
 (require 'paren)
 (setq show-paren-style 'parenthesis)
 (show-paren-mode +1)
-(electric-indent-mode +1)
 (electric-pair-mode +1)
+(add-hook 'prog-mode-hook '(lambda () (local-set-key "\r" 'newline-and-indent)))
 
 (defun smarter-move-beginning-of-line (arg)
   (interactive "^p")
