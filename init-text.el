@@ -14,6 +14,11 @@
 (electric-pair-mode +1)
 (add-hook 'prog-mode-hook '(lambda () (local-set-key "\r" 'newline-and-indent)))
 
+(require 'whitespace)
+(setq whitespace-line-column 100)
+(setq whitespace-style '(face lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 (defun smarter-move-beginning-of-line (arg)
   (interactive "^p")
   (setq arg (or arg 1))
