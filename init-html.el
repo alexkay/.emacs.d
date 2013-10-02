@@ -2,6 +2,6 @@
           (lambda()
             (setq sgml-basic-offset 4)
             (local-set-key "\r" 'newline-and-indent)
-            (setq indent-tabs-mode f)))
+            (setq indent-tabs-mode nil)))
 
 (provide 'init-html)

@@ -11,10 +11,8 @@
 (require 'paren)
 (setq show-paren-style 'parenthesis)
 (show-paren-mode +1)
-(electric-pair-mode +1)
 (add-hook 'prog-mode-hook '(lambda () (local-set-key "\r" 'newline-and-indent)))
 
-(require 'whitespace)
 (setq whitespace-line-column 100)
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)

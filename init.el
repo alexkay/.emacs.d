@@ -5,6 +5,7 @@
 
 (require 'init-c)
 (require 'init-csharp)
+(require 'init-go)
 (require 'init-haskell)
 (require 'init-html)
 (require 'init-markdown)
