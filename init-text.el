@@ -17,6 +17,9 @@
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+(which-function-mode)
+(setq which-func-unknown "n/a")
+
 (defun smarter-move-beginning-of-line (arg)
   (interactive "^p")
   (setq arg (or arg 1))
