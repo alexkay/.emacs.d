@@ -2,5 +2,6 @@
 
 * lang/csharp-mode.el
 * lang/haskell-mode.el
+* lang/php-mode.el
 * lang/tuareg-mode.el
 * textproc/markdown-mode.el
