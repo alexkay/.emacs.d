@@ -30,4 +30,10 @@
 (ido-mode t)
 (setq ido-enable-flex-matching t)
 
+(require 'package)
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(package-initialize)
+
+;Install: php-mode go-mode haskell-mode markdown-mode rust-mode pandoc-mode
+
 (provide 'init-ui)

@@ -8,9 +8,6 @@
 ;(pymacs-load "ropemacs" "rope-")
 ;(setq ropemacs-enable-autoimport 't)
 
-;; Django templates.
-(require 'django-html-mode)
-
 ;; pylint
 (when (load "flymake" t)
   (defun flymake-pylint-init ()
