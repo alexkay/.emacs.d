@@ -34,6 +34,4 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-;Install: php-mode go-mode haskell-mode markdown-mode rust-mode pandoc-mode puppet-mode
-
 (provide 'init-ui)
