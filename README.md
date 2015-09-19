@@ -4,6 +4,7 @@
 
 * go-mode
 * haskell-mode
+* less-css-mode
 * markdown-mode
 * pandoc-mode
 * php-mode
